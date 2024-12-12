@@ -1,0 +1,145 @@
+/* Image d'arrière-plan */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    background-image: url('https://th.bing.com/th/id/OIP.CgNngzfuHQLsz44D6w7NKQAAAA?w=328&h=184&c=7&r=0&o=5&dpr=1.5&pid=1.7'); /* Chemin de votre image */
+    background-size: cover; /* Couvre tout l'écran */
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff; /* Texte en blanc */
+}
+
+/* Superposition semi-transparente sur l'image */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Couche noire semi-transparente */
+    z-index: 0; /* Derrière le texte */
+}
+
+/* Conteneur principal */
+.container {
+    position: relative; /* Permet d'être au-dessus de la superposition */
+    z-index: 1; /* Texte au-dessus de la superposition */
+    display:inline;
+    width: 100px;
+    height: 100vh;
+    
+    padding: 20px;
+    text-align: center;
+    
+    
+    
+    
+    margin: auto;
+    
+}
+
+.logo{
+    display: flex;
+    width: 150px;
+}
+
+
+/* Titres */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #f0a500; /* Couleur or pour contraster */
+    font-size: 4vw;
+    
+}
+
+
+/* Zone d'ajout d'article */
+input, select, button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    
+}
+
+button {
+    background-color: #f0a500;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px,15px;
+}
+
+button:hover {
+    background-color: #ffc107;
+}
+
+/* Liste des articles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-btn {
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Boutons de catégorie */
+.category-btn {
+    background: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.category-btn.active {
+    background: #f0a500;
+    color: #000;
+}
+
+.category-btn:hover {
+    background: #666;
+}
+
+/* Boutons d'action */
+.action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.action-buttons button {
+    width: calc(50% - 10px);
+}
+

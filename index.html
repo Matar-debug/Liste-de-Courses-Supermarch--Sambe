@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste de Courses</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+   
+    <div class="container">
+        <img src="c:\Users\HP\Downloads\logo 3.jpeg" class="logo" alt="">
+        
+        
+        <h1>SUPERMARCHE SAMBE </h1>
+        <h2>liste des courses</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate officia enim debitis quaerat impedit et, quas cum provident sed possimus, sequi eaque pariatur dolorem, eum quisquam? Eveniet laboriosam delectus ratione.</p>
+        <div >
+            
+            <input type="text" id="item-input" placeholder="Nouvel article" required>
+            <input type="number" id="item-quantity" placeholder="Qté" min="1" value="1">
+            <select id="item-category">
+                <option value="fruits">Fruits</option>
+                <option value="legumes">Légumes</option>
+                <option value="viandes">Viandes</option>
+                <option value="produits-laitiers">Produits Laitiers</option>
+                <option value="epicerie">Épicerie</option>
+                <option value="autres">Autres</option>
+            </select>
+            <button onclick="addItem()">Ajouter</button>
+        </div>
+        
+        <div>
+            <button class="category-btn active" onclick="filterItems('all')">Tous</button>
+            <button class="category-btn" onclick="filterItems('fruits')">Fruits</button>
+            <button class="category-btn" onclick="filterItems('legumes')">Légumes</button>
+            <button class="category-btn" onclick="filterItems('viandes')">Viandes</button>
+            <button class="category-btn" onclick="filterItems('produits-laitiers')">Produits Laitiers</button>
+            <button class="category-btn" onclick="filterItems('epicerie')">Épicerie</button>
+        </div>
+
+        <ul id="shopping-list"></ul>
+
+        <div class="action-buttons">
+            <button onclick="clearList()">Vider la liste</button>
+            <button onclick="printList()">Liste imprimable</button>
+                 
+        </div>
+        <p><footer>2024-2025</footer></p>
+    </div>
+    
+</body>
+
+</html>
+
